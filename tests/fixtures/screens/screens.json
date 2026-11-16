@@ -1,0 +1,49 @@
+{
+  "_meta": {
+    "purpose": "C2 screen fixtures: at least one per class the classifier can reach from a screen.",
+    "provenance": "Each entry carries `source`. 'recorded' means the text was captured from a live session during this project; 'reconstructed' means the incident was real and the screen text is rebuilt from the log lines and shapes that were recorded at the time. Nothing here is invented as an incident.",
+    "note": "The fixer #93 terminal (handle bcb8d4ed…) no longer exists — it is absent from `orca terminal list`, so its screen cannot be read live any more. That case is therefore reconstructed from the opencode.log lines recorded while it happened, and is labelled as such rather than presented as a capture."
+  },
+  "screens": {
+    "term_fixer93": {
+      "source": "reconstructed",
+      "incident": "fixer #93, 2026-09-21 13:17:05–13:18:25Z: five stream errors then 'Cannot connect to API'; the terminal showed the idle bar with no timer; three further `terminal send` attempts did nothing.",
+      "text": "  fixer #93 · rebase PR 93 onto the pipeline base\n\n  I have rebased onto 8a854ff and resolved the gallery conflicts. Running the suite before pushing.\n\n  ⬝⬝⬝⬝⬝⬝⬝⬝\n\n  stream error: upstream closed the connection\n  stream error: upstream closed the connection\n  stream error: upstream closed the connection\n  stream error: upstream closed the connection\n  stream error: upstream closed the connection\n  Cannot connect to API\n"
+    },
+    "term_tester114c": {
+      "source": "recorded",
+      "incident": "tester-114c: started a preview (pid 26608), the turn ended, and the terminal sat on the idle bar with no timer and no report.",
+      "text": "  tester-114c · verify PR 114 in a browser\n\n  preview server started pid=26608 on :4221\n\n  81.5K/8%\n\n  ⬝⬝⬝⬝⬝⬝⬝⬝\n"
+    },
+    "term_fixer93_permission": {
+      "source": "reconstructed",
+      "incident": "fixer-93 asked for authority before pushing, and the coordinator answered with an explicit authorization.",
+      "text": "  fixer-93 · rebase PR 93\n\n  The rebase is complete and the suite passes locally, but the push needs a force-with-lease and\n  the repository guard denies `git push --force*`. May I push with the refspec before the flag?\n\n  34.2K/12%\n"
+    },
+    "term_coder_rate": {
+      "source": "reconstructed",
+      "incident": "The provider returned 429 during a burst of parallel workers; the worker retried without burning an attempt.",
+      "text": "  coder-112 · gallery WCAG tokens\n\n  rate limit exceeded (429): too many requests, retrying in 20s\n\n  12.1K/4%\n"
+    },
+    "term_working": {
+      "source": "recorded",
+      "incident": "A normally working worker: live turn, advancing counter, timer present.",
+      "text": "  reviewer-pr114 · dark contrast\n\n  Reading the rail component and the token overrides…\n\n  57.3K/31%\n  esc to interrupt · 2m 14s\n"
+    },
+    "term_frozen_t0": {
+      "source": "recorded",
+      "incident": "First sample of a worker whose counter did not move (the shape behind the earlier false positive).",
+      "text": "  fixer-93 · push\n\n  preparing the push…\n\n  87.6K/44%\n"
+    },
+    "term_frozen_t1": {
+      "source": "recorded",
+      "incident": "Second sample, same counter, well over 90 s later: identical counter, so the stall is a SUSPECT (never proof).",
+      "text": "  fixer-93 · push\n\n  preparing the push…\n\n  87.6K/44%\n"
+    },
+    "term_finished_waiting": {
+      "source": "recorded",
+      "incident": "The 14:48 false positive: a worker that had FINISHED and was waiting to be collected, which an earlier detector called frozen.",
+      "text": "  reviewer-123 · verdict posted\n\n  dsv-verdict status: pass, role: reviewer, commit: c0a7ac3, scope_ok: yes\n\n  63.1K/27%\n\n  ⬝⬝⬝⬝⬝⬝⬝⬝\n"
+    }
+  }
+}

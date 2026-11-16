@@ -1,0 +1,2 @@
+{"ts":"2026-11-16T18:25:45.193Z","decision":"allow","rule":"allow:^orca\\s+--version\\b","reason":"section 3: orca --version","command":"orca --version","cwd":null,"executed":false}
+{"ts":"2026-11-16T18:25:45.194Z","decision":"deny","rule":"deny:^git\\s+(-C\\s+\\S+\\s+)?(commit|push|checko","reason":"section 3: git write","command":"git push origin HEAD:main","cwd":null,"executed":false}

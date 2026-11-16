@@ -1,0 +1,2035 @@
+{
+  "schema": "snapshot/1",
+  "taken_at_utc": "2026-09-23T18:27:37Z",
+  "taken_by": "src/snapshot.js",
+  "read_only": true,
+  "errors": [],
+  "orca": {
+    "version": "1.4.206",
+    "run": {
+      "run_id": "run_4e539259ab29",
+      "coordinator_handle": "term_752a4375-4a0f-449a-84dd-1f87898c0157"
+    },
+    "tasks": [
+      {
+        "id": "task_f3dfad5999f0",
+        "title": "coder issue #39",
+        "status": "completed",
+        "created_at": "2026-09-18 15:15:49",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_3007b4dc243f",
+        "title": "coder issue #35",
+        "status": "completed",
+        "created_at": "2026-09-18 15:15:51",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_e31fd4b2f170",
+        "title": "coder issue #28",
+        "status": "completed",
+        "created_at": "2026-09-18 15:15:52",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_d4418f5858c0",
+        "title": "batch review PRs 52/54/55/56",
+        "status": "completed",
+        "created_at": "2026-09-18 15:23:40",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_92b62666ffe0",
+        "title": "tester issue #25",
+        "status": "completed",
+        "created_at": "2026-09-18 15:27:55",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_ad86861fd042",
+        "title": "tester issue #35",
+        "status": "failed",
+        "created_at": "2026-09-18 15:27:57",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_87b43698e02c",
+        "title": "tester issue #39",
+        "status": "completed",
+        "created_at": "2026-09-18 15:27:58",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_bcd421c437a3",
+        "title": "tester issue #28",
+        "status": "completed",
+        "created_at": "2026-09-18 15:28:00",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_8b2ac195af00",
+        "title": "coder issue #38",
+        "status": "completed",
+        "created_at": "2026-09-18 16:17:35",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_7b9ff8361c8f",
+        "title": "coder issue #36",
+        "status": "completed",
+        "created_at": "2026-09-18 16:17:37",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_73fee366b8bd",
+        "title": "reviewer for issue #38 / PR 57",
+        "status": "completed",
+        "created_at": "2026-09-18 16:32:07",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_2de50d479073",
+        "title": "tester for issue #38 / PR 57",
+        "status": "failed",
+        "created_at": "2026-09-18 16:32:09",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_11330d404915",
+        "title": "review PR 59 (issue #36)",
+        "status": "completed",
+        "created_at": "2026-09-18 16:34:49",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_6248949c8a64",
+        "title": "fixer for PR 59 (issue #36)",
+        "status": "completed",
+        "created_at": "2026-09-18 16:37:11",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_4c1f579d01b9",
+        "title": "re-review PR 59 after fix",
+        "status": "completed",
+        "created_at": "2026-09-18 17:11:25",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_679890b48f27",
+        "title": "tester issue #38 (retry: pre-built harness, port 4178)",
+        "status": "completed",
+        "created_at": "2026-09-18 17:17:41",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_1a6d9736613b",
+        "title": "tester issue #35 (retry: pre-built harness, port 4179)",
+        "status": "completed",
+        "created_at": "2026-09-18 17:17:43",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_e57a4d36c40f",
+        "title": "tester issue #36 (pre-built harness, port 4180)",
+        "status": "completed",
+        "created_at": "2026-09-18 17:44:05",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_7693f753123c",
+        "title": "coder issue #40 (fonts scope)",
+        "status": "completed",
+        "created_at": "2026-09-18 17:59:08",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_d1902e157582",
+        "title": "coder issue #29 (dead systemStorage)",
+        "status": "completed",
+        "created_at": "2026-09-18 17:59:10",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_f6a7984aafde",
+        "title": "review PR 61 (issue #29)",
+        "status": "completed",
+        "created_at": "2026-09-18 18:07:43",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_a949c0f736e3",
+        "title": "tester issue #29 (harness, port 4181)",
+        "status": "completed",
+        "created_at": "2026-09-18 18:07:44",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_960b5908ad2e",
+        "title": "coder issue #20 (Compare first-boot cols)",
+        "status": "completed",
+        "created_at": "2026-09-18 18:13:58",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_26653f49842c",
+        "title": "review PR 62 (issue #40)",
+        "status": "completed",
+        "created_at": "2026-09-18 18:17:09",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_3fb94f468dec",
+        "title": "tester issue #40 (harness, port 4182)",
+        "status": "completed",
+        "created_at": "2026-09-18 18:17:11",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_f01ae0e1b72c",
+        "title": "fixer PR 62 (issue #40)",
+        "status": "completed",
+        "created_at": "2026-09-18 18:21:30",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_07be9cd31998",
+        "title": "coder issue #24",
+        "status": "completed",
+        "created_at": "2026-09-18 18:21:43",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_84a2349cf43e",
+        "title": "coder issue #33",
+        "status": "completed",
+        "created_at": "2026-09-18 18:21:45",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_2f9e28da2b05",
+        "title": "re-review PR 62 after fix",
+        "status": "completed",
+        "created_at": "2026-09-18 18:33:01",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_fa8ca8976bb7",
+        "title": "review PR 66",
+        "status": "completed",
+        "created_at": "2026-09-18 18:45:08",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_ccdb837c7af2",
+        "title": "tester #24 (port 4184)",
+        "status": "completed",
+        "created_at": "2026-09-18 18:45:10",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_d508660677a0",
+        "title": "review PR 68",
+        "status": "completed",
+        "created_at": "2026-09-18 18:45:12",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_fbffe975ad73",
+        "title": "tester #33 (port 4185)",
+        "status": "completed",
+        "created_at": "2026-09-18 18:45:15",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_364ea3378918",
+        "title": "review PR 63 (issue #20)",
+        "status": "completed",
+        "created_at": "2026-09-18 18:46:19",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_5998d5fafa3f",
+        "title": "tester #20 (port 4186)",
+        "status": "completed",
+        "created_at": "2026-09-18 18:46:21",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_10f39392a1a2",
+        "title": "fixer PR 68 (issue #33)",
+        "status": "completed",
+        "created_at": "2026-09-18 18:47:59",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_f72e3d5f31e3",
+        "title": "re-review PR 68 after fix",
+        "status": "completed",
+        "created_at": "2026-09-18 18:59:59",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_ef93c573e7ef",
+        "title": "test PR 68 on post-fix head",
+        "status": "completed",
+        "created_at": "2026-09-18 19:05:51",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_19a13b592055",
+        "title": "coder issue 32",
+        "status": "completed",
+        "created_at": "2026-09-18 19:14:41",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_305f305f7939",
+        "title": "coder issue 37",
+        "status": "completed",
+        "created_at": "2026-09-18 19:14:43",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_843bbf799bdc",
+        "title": "dispatcher: waves for PR 69 and PR 70",
+        "status": "completed",
+        "created_at": "2026-09-18 19:25:57",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_33a653f3514e",
+        "title": "dispatcher: waves for PR 69 and PR 70",
+        "status": "completed",
+        "created_at": "2026-09-18 19:36:33",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_162395269c0a",
+        "title": "review PR 69",
+        "status": "completed",
+        "created_at": "2026-09-18 19:45:10",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_e55947693040",
+        "title": "review PR 70",
+        "status": "completed",
+        "created_at": "2026-09-18 19:45:12",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_85bae84e8a8b",
+        "title": "test PR for issue 69",
+        "status": "failed",
+        "created_at": "2026-09-18 19:45:59",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_bb6d266b05f1",
+        "title": "test PR for issue 70",
+        "status": "failed",
+        "created_at": "2026-09-18 19:46:02",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_6b602e11a2d0",
+        "title": "fixer PR 69 scope revert",
+        "status": "completed",
+        "created_at": "2026-09-18 19:50:18",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_fc4fe29877e2",
+        "title": "fixer PR 70 token resolution",
+        "status": "completed",
+        "created_at": "2026-09-18 19:51:20",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_d21d5daee5b9",
+        "title": "re-review PR 69 after scope fix",
+        "status": "completed",
+        "created_at": "2026-09-18 20:07:19",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_9fe1f16fb9a6",
+        "title": "coder issue 31",
+        "status": "completed",
+        "created_at": "2026-09-18 20:07:22",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_9818fae0289d",
+        "title": "scope re-review PR 62 (name the out-of-scope change)",
+        "status": "completed",
+        "created_at": "2026-09-18 20:12:09",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_af4af0abbc64",
+        "title": "test PR 69 (post-revert, head fd1dfa4)",
+        "status": "completed",
+        "created_at": "2026-09-18 20:15:57",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_1d9d7f59968f",
+        "title": "review PR 77",
+        "status": "completed",
+        "created_at": "2026-09-18 20:19:22",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_7211197cbd1a",
+        "title": "test PR 62 (head e61b570)",
+        "status": "completed",
+        "created_at": "2026-09-18 20:19:50",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_4f459e5c7443",
+        "title": "test PR 77 (head a9078d3)",
+        "status": "completed",
+        "created_at": "2026-09-18 20:28:02",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_c428ab3ea684",
+        "title": "fixer PR 70: wire the dark flag from App.tsx",
+        "status": "completed",
+        "created_at": "2026-09-18 20:33:57",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_c85366bd67b6",
+        "title": "coder issue 26",
+        "status": "completed",
+        "created_at": "2026-09-18 20:34:16",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_53a5dba578fd",
+        "title": "coder issue 34 (file-local half)",
+        "status": "completed",
+        "created_at": "2026-09-18 20:38:47",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_ae3604dfcb68",
+        "title": "coder issue 30 (file-local half)",
+        "status": "failed",
+        "created_at": "2026-09-18 20:38:50",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_a08ce77e34f8",
+        "title": "coder issue 22 (file-local half)",
+        "status": "completed",
+        "created_at": "2026-09-18 20:44:21",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_706d92c6861e",
+        "title": "review PR 81",
+        "status": "completed",
+        "created_at": "2026-09-18 20:49:14",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_4dc913422c40",
+        "title": "re-review PR 70 after the App wiring",
+        "status": "completed",
+        "created_at": "2026-09-18 20:52:12",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_fa290cf52b34",
+        "title": "review PR 82 (half + deferred hunks)",
+        "status": "completed",
+        "created_at": "2026-09-18 20:52:15",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_48b3e677346d",
+        "title": "test PR 81 (head a19949e)",
+        "status": "completed",
+        "created_at": "2026-09-18 20:53:25",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_a8aaa8bd02b2",
+        "title": "test PR 70 after wiring (2d7a19a)",
+        "status": "completed",
+        "created_at": "2026-09-18 20:59:07",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_cf1515aa64a2",
+        "title": "test PR 82 (half, ea180f3)",
+        "status": "completed",
+        "created_at": "2026-09-18 20:59:10",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_480b41ea20f7",
+        "title": "review PR 83 (half + deferred hunks)",
+        "status": "completed",
+        "created_at": "2026-09-18 21:08:29",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_eeeec60c3dc1",
+        "title": "review PR 80 (half + deferred hunks)",
+        "status": "completed",
+        "created_at": "2026-09-18 21:10:39",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_7fce3a4f14ef",
+        "title": "fix PR 82 findings",
+        "status": "completed",
+        "created_at": "2026-09-18 21:13:15",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_1d58ee791015",
+        "title": "test PR 80 (half, c70fe90)",
+        "status": "completed",
+        "created_at": "2026-09-18 21:18:38",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_6e41c8436acf",
+        "title": "test PR 83 (half, 4cd0f35)",
+        "status": "completed",
+        "created_at": "2026-09-18 21:19:17",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_42252842b294",
+        "title": "coder issue 27 (file-local half)",
+        "status": "completed",
+        "created_at": "2026-09-18 21:20:14",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_162d0aacd311",
+        "title": "UI audit: find what is wrong with the interface",
+        "status": "completed",
+        "created_at": "2026-09-18 21:33:22",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_a160e905f1c1",
+        "title": "re-review PR 82 after the fixer and wiring commits",
+        "status": "completed",
+        "created_at": "2026-09-18 21:42:04",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_bf988633f809",
+        "title": "re-test PR 82 on ab32b95",
+        "status": "completed",
+        "created_at": "2026-09-18 21:43:14",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_7ee954bc5701",
+        "title": "review PR 83 (retry after the agent died)",
+        "status": "failed",
+        "created_at": "2026-09-18 21:46:37",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_b285d9e0bed1",
+        "title": "fix PR 83 contrast finding",
+        "status": "completed",
+        "created_at": "2026-09-18 21:52:02",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_eda1e04d8271",
+        "title": "coder issue 88 (audit finding)",
+        "status": "completed",
+        "created_at": "2026-09-18 21:55:29",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_e60b4f8573d5",
+        "title": "coder issue 90 (audit finding)",
+        "status": "failed",
+        "created_at": "2026-09-18 21:56:04",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_a651640fd740",
+        "title": "coder issue 91 (audit finding)",
+        "status": "completed",
+        "created_at": "2026-09-18 21:56:33",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_d8adc3c7fa05",
+        "title": "review PR 92 (ephemeral value edits)",
+        "status": "completed",
+        "created_at": "2026-09-18 22:03:13",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_572f5b5b3f05",
+        "title": "test PR 92 (ephemeral edits, b2cc319)",
+        "status": "completed",
+        "created_at": "2026-09-18 22:05:43",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_c2a228c446b9",
+        "title": "fix the rail-click layout shift (#94)",
+        "status": "completed",
+        "created_at": "2026-09-18 22:18:24",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_f6864524a61d",
+        "title": "review PR 93 (gallery contrast + tokens)",
+        "status": "completed",
+        "created_at": "2026-09-18 22:24:53",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_02bd028b25ad",
+        "title": "test PR 93 (gallery contrast live)",
+        "status": "failed",
+        "created_at": "2026-09-18 22:29:17",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_ab7478596f41",
+        "title": "fix PR 92 precedence + root repaint",
+        "status": "failed",
+        "created_at": "2026-09-18 22:32:41",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_5d6866fa3ee1",
+        "title": "review PR 99 (shell contract)",
+        "status": "completed",
+        "created_at": "2026-09-18 22:34:29",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_00fc3eefd41e",
+        "title": "review PR 99 (shell contract)",
+        "status": "failed",
+        "created_at": "2026-09-18 22:34:37",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_af5755e31994",
+        "title": "test PR 99 (shell contract, live)",
+        "status": "completed",
+        "created_at": "2026-09-18 22:36:12",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_a5a86fb56440",
+        "title": "coder issue 95 (full shell refactor)",
+        "status": "completed",
+        "created_at": "2026-09-18 22:41:21",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_12f1ef0b3f7d",
+        "title": "fix PR 93 regression + sweep",
+        "status": "completed",
+        "created_at": "2026-09-18 22:56:37",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_fdb5e917af4e",
+        "title": "review PR 103 (shell rail frame)",
+        "status": "completed",
+        "created_at": "2026-09-18 22:59:03",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_2b80319bd917",
+        "title": "test PR 103 (shell rail frame)",
+        "status": "completed",
+        "created_at": "2026-09-18 23:06:38",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_d3d899e1df5a",
+        "title": "fix PR 92 (retry: agent died)",
+        "status": "completed",
+        "created_at": "2026-09-18 23:07:40",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_c1a64e0fc1ae",
+        "title": "fix PR 103 (rebase + props frame)",
+        "status": "completed",
+        "created_at": "2026-09-18 23:19:34",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_cadc9e6c0c01",
+        "title": "re-review PR 93 (zero-sweep credibility)",
+        "status": "failed",
+        "created_at": "2026-09-18 23:22:29",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_e2fb0ceaa2c9",
+        "title": "re-review PR 92 (legacy precedence adjudication)",
+        "status": "completed",
+        "created_at": "2026-09-18 23:27:37",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_e1846fe0e913",
+        "title": "review PR 97 (preview states)",
+        "status": "completed",
+        "created_at": "2026-09-18 23:32:32",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_c703383f55ed",
+        "title": "fix PR 92 (restore legacy swap-first)",
+        "status": "completed",
+        "created_at": "2026-09-18 23:35:21",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_20c94242709a",
+        "title": "re-test PR 93 (zero sweep) on ddcf730",
+        "status": "failed",
+        "created_at": "2026-09-18 23:41:10",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_ec82c052c252",
+        "title": "test PR 97 (preview states)",
+        "status": "completed",
+        "created_at": "2026-09-18 23:42:01",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_ea4881dbe79e",
+        "title": "re-review PR 83 (contrast + wiring)",
+        "status": "completed",
+        "created_at": "2026-09-18 23:46:09",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_a0b322017fa8",
+        "title": "test PR 83 (compare dark + contrast)",
+        "status": "completed",
+        "created_at": "2026-09-18 23:46:57",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_3d6b7ac3e506",
+        "title": "re-review PR 83 on b9c2d52 (contrast applied)",
+        "status": "completed",
+        "created_at": "2026-09-19 00:10:00",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_d04201945273",
+        "title": "review PR 103 on d4cb403 (rebase + props frame)",
+        "status": "completed",
+        "created_at": "2026-09-19 00:12:18",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_c778d6372dca",
+        "title": "re-review PR 92 on 1b86c68 (legacy order restored)",
+        "status": "completed",
+        "created_at": "2026-09-19 00:12:23",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_1ec61dbeb138",
+        "title": "fix PR 83 (rebase onto main, repair the tree)",
+        "status": "completed",
+        "created_at": "2026-09-19 00:18:35",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_70b4273699ff",
+        "title": "review PR 83 on 823ebc5 (main merged, compiles)",
+        "status": "completed",
+        "created_at": "2026-09-19 00:27:58",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_4071d19afdb6",
+        "title": "review PR 103 on 3f59e13",
+        "status": "completed",
+        "created_at": "2026-09-19 00:30:48",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_ffbb6cf7e838",
+        "title": "review PR 93 on 940bac0",
+        "status": "completed",
+        "created_at": "2026-09-19 00:30:53",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_2b9112b47633",
+        "title": "review PR 92 on e10290e",
+        "status": "completed",
+        "created_at": "2026-09-19 00:30:58",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_b19f42bd975f",
+        "title": "test PR 83 on 823ebc5 (repaired)",
+        "status": "completed",
+        "created_at": "2026-09-19 00:32:18",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_9bcf845ff9e2",
+        "title": "test PR 83 on 823ebc5 (final)",
+        "status": "completed",
+        "created_at": "2026-09-19 00:44:42",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_bc9895481ca5",
+        "title": "test PR 103 on 3f59e13 (rebased+props)",
+        "status": "completed",
+        "created_at": "2026-09-19 00:51:37",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_362982bd6d20",
+        "title": "test PR 93 on 940bac0 (sweep, rebased)",
+        "status": "failed",
+        "created_at": "2026-09-19 00:56:17",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_20dbf78dfd37",
+        "title": "test PR 92 on e10290e (legacy order, rebased)",
+        "status": "failed",
+        "created_at": "2026-09-19 00:59:31",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_f5f4c27e327a",
+        "title": "test PR 103 (fresh) on 3f59e13",
+        "status": "completed",
+        "created_at": "2026-09-19 01:22:43",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_6232324ba6d3",
+        "title": "test PR 93 (fresh) on 940bac0",
+        "status": "failed",
+        "created_at": "2026-09-19 01:23:06",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_beee6d335fd7",
+        "title": "test PR 92 (fresh) on e10290e",
+        "status": "failed",
+        "created_at": "2026-09-19 01:23:30",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_fa652710f413",
+        "title": "test PR 103 (single tester) on 3f59e13",
+        "status": "completed",
+        "created_at": "2026-09-19 01:31:07",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_2912040467cb",
+        "title": "test PR 93 (serialized) on 940bac0",
+        "status": "failed",
+        "created_at": "2026-09-19 01:41:13",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_157641062f5a",
+        "title": "audit MISSING (legacy parity, export/preview completeness, absent states) on...",
+        "status": "completed",
+        "created_at": "2026-09-19 23:38:39",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_fdcef2197056",
+        "title": "audit BAD (journeys, feedback, reversibility, copy) on http://localhost:4221/...",
+        "status": "completed",
+        "created_at": "2026-09-19 23:39:05",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_2ed5aacd9942",
+        "title": "audit BAD (hierarchy, rhythm, alignment, token discipline, narrow) on http://...",
+        "status": "completed",
+        "created_at": "2026-09-19 23:39:37",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_483fd79d4e62",
+        "title": "audit BAD (keyboard, ARIA, measured contrast, motion, targets) on http://loca...",
+        "status": "failed",
+        "created_at": "2026-09-19 23:40:31",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_9b61a4cd614a",
+        "title": "coder #108 (value-edit undo)",
+        "status": "completed",
+        "created_at": "2026-09-20 01:01:52",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_3590e0da145a",
+        "title": "coder #109 (Dark mode gallery contrast)",
+        "status": "completed",
+        "created_at": "2026-09-20 01:03:44",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_9e8a9594ed1c",
+        "title": "coder #110 (dark lost in export and copy link)",
+        "status": "completed",
+        "created_at": "2026-09-20 01:04:05",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_a411faf7607f",
+        "title": "coder #112 (viewer chrome type and font)",
+        "status": "failed",
+        "created_at": "2026-09-20 01:04:32",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_ea64f2be621f",
+        "title": "review PR 113 (dark variant in export + copy link)",
+        "status": "completed",
+        "created_at": "2026-09-20 01:26:37",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_0b435f70ee35",
+        "title": "test PR 113 (dark in export + copy link) on 4215",
+        "status": "completed",
+        "created_at": "2026-09-20 01:28:58",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_65d6b653b431",
+        "title": "review PR 114 (dark gallery contrast)",
+        "status": "failed",
+        "created_at": "2026-09-20 01:31:42",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_df7fc9c42ebc",
+        "title": "review PR 107 (shell refactor on the pipeline base)",
+        "status": "failed",
+        "created_at": "2026-09-20 01:33:03",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_c917d49cbcd7",
+        "title": "review PR 107 (shell refactor on the pipeline base)",
+        "status": "failed",
+        "created_at": "2026-09-20 01:34:26",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_caaccc26d742",
+        "title": "review PR 114 (dark gallery contrast)",
+        "status": "completed",
+        "created_at": "2026-09-20 01:38:36",
+        "created_by_terminal": "term_795ae4f7-1e2e-4180-ae4d-74026f247989"
+      },
+      {
+        "id": "task_be40077a61ae",
+        "title": "review PR 107 (shell refactor on the pipeline base)",
+        "status": "completed",
+        "created_at": "2026-09-21 01:24:49",
+        "created_by_terminal": "term_752a4375-4a0f-449a-84dd-1f87898c0157"
+      },
+      {
+        "id": "task_fb32c00e5f81",
+        "title": "review PR 114 (dark gallery contrast)",
+        "status": "completed",
+        "created_at": "2026-09-21 01:24:51",
+        "created_by_terminal": "term_752a4375-4a0f-449a-84dd-1f87898c0157"
+      },
+      {
+        "id": "task_f3b6a6ea2045",
+        "title": "test PR 107 (shell refactor) on 4217",
+        "status": "completed",
+        "created_at": "2026-09-21 01:26:31",
+        "created_by_terminal": "term_752a4375-4a0f-449a-84dd-1f87898c0157"
+      },
+      {
+        "id": "task_fbf127608429",
+        "title": "test PR 114 (dark gallery contrast) on 4218",
+        "status": "failed",
+        "created_at": "2026-09-21 02:55:37",
+        "created_by_terminal": "term_752a4375-4a0f-449a-84dd-1f87898c0157"
+      },
+      {
+        "id": "task_51688990ae10",
+        "title": "review PR 122 (shell frames, app-only)",
+        "status": "completed",
+        "created_at": "2026-09-21 03:09:38",
+        "created_by_terminal": "term_752a4375-4a0f-449a-84dd-1f87898c0157"
+      },
+      {
+        "id": "task_61446d331cec",
+        "title": "test PR 122 (shell frames) on 4219",
+        "status": "completed",
+        "created_at": "2026-09-21 03:11:01",
+        "created_by_terminal": "term_752a4375-4a0f-449a-84dd-1f87898c0157"
+      },
+      {
+        "id": "task_a76dd66cae43",
+        "title": "coder #112 (viewer chrome type and font)",
+        "status": "completed",
+        "created_at": "2026-09-21 04:21:37",
+        "created_by_terminal": "term_752a4375-4a0f-449a-84dd-1f87898c0157"
+      },
+      {
+        "id": "task_5ee2aa9ac2ec",
+        "title": "review PR 123 (chrome type from the design system)",
+        "status": "completed",
+        "created_at": "2026-09-21 04:58:15",
+        "created_by_terminal": "term_752a4375-4a0f-449a-84dd-1f87898c0157"
+      },
+      {
+        "id": "task_5564b335e9b6",
+        "title": "test PR 123 (chrome type) on 4220",
+        "status": "completed",
+        "created_at": "2026-09-21 05:00:10",
+        "created_by_terminal": "term_752a4375-4a0f-449a-84dd-1f87898c0157"
+      },
+      {
+        "id": "task_3115d5086b9d",
+        "title": "test PR 114 (dark gallery contrast) on 4221",
+        "status": "completed",
+        "created_at": "2026-09-21 05:03:59",
+        "created_by_terminal": "term_752a4375-4a0f-449a-84dd-1f87898c0157"
+      },
+      {
+        "id": "task_0d479c69f1bf",
+        "title": "review PR 123 (chrome typography, #112)",
+        "status": "completed",
+        "created_at": "2026-09-21 05:28:54",
+        "created_by_terminal": "term_752a4375-4a0f-449a-84dd-1f87898c0157"
+      },
+      {
+        "id": "task_323ded5b8758",
+        "title": "test PR 114 (dark gallery contrast) on 4221 - retry",
+        "status": "completed",
+        "created_at": "2026-09-21 11:54:12",
+        "created_by_terminal": "term_752a4375-4a0f-449a-84dd-1f87898c0157"
+      },
+      {
+        "id": "task_c626d357cac9",
+        "title": "test PR 114 (dark contrast) - short spec",
+        "status": "completed",
+        "created_at": "2026-09-21 12:05:42",
+        "created_by_terminal": "term_752a4375-4a0f-449a-84dd-1f87898c0157"
+      },
+      {
+        "id": "task_0e29a5e03a38",
+        "title": "test PR 93 (gallery WCAG contrast) on 4223",
+        "status": "completed",
+        "created_at": "2026-09-21 12:13:36",
+        "created_by_terminal": "term_752a4375-4a0f-449a-84dd-1f87898c0157"
+      },
+      {
+        "id": "task_c23d87eea0c9",
+        "title": "fixer: rebase PR 93 onto the pipeline base and resolve 5 gallery conflicts",
+        "status": "ready",
+        "created_at": "2026-09-21 12:23:01",
+        "created_by_terminal": "term_752a4375-4a0f-449a-84dd-1f87898c0157"
+      }
+    ],
+    "dispatches": [],
+    "worker_pages": {
+      "pages": 2,
+      "rows": 151,
+      "counts_retained": 151,
+      "truncated": false
+    },
+    "terminals": [
+      {
+        "handle": "term_752a4375-4a0f-449a-84dd-1f87898c0157",
+        "agent": null,
+        "state": null,
+        "retained": false
+      },
+      {
+        "handle": "term_f3ee7f27-6b54-4cae-bfec-239f6af3d31c",
+        "agent": null,
+        "state": null,
+        "retained": false
+      },
+      {
+        "handle": "term_55deac26-ad4d-4b5d-9c55-afee24104257",
+        "agent": null,
+        "state": null,
+        "retained": false
+      }
+    ],
+    "worktrees": [
+      {
+        "path": "D:/code/design-system-viewer",
+        "branch": "refs/heads/refactor/full-react-migration",
+        "display_name": "coordinator"
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/proteus-5",
+        "branch": "refs/heads/fix/shell-onto-pipeline-base",
+        "display_name": "proteus-5"
+      }
+    ]
+  },
+  "github": {
+    "prs": [
+      {
+        "number": 126,
+        "title": "[coder] feat(app): the Add System modal becomes the import surface (#124)",
+        "head_sha": "e6d88ec4bafdf29cdf6862842675e9b0828e5d80",
+        "base": "refactor/full-react-migration",
+        "mergeable": "MERGEABLE",
+        "checks_state": null,
+        "verdict_comment": null
+      },
+      {
+        "number": 93,
+        "title": "[coder] fix(app): gallery WCAG contrast + token discipline (#88)",
+        "head_sha": "57d7a7c6e58bfba503bc256658b89ae41192d72f",
+        "base": "refactor/full-react-migration",
+        "mergeable": "MERGEABLE",
+        "checks_state": null,
+        "verdict_comment": null
+      },
+      {
+        "number": 92,
+        "title": "[coder] fix(app): make Preview token value-edits ephemeral again (#27)",
+        "head_sha": "e10290e8395e46209324cb47068538ae833cd3b5",
+        "base": "refactor/full-react-migration",
+        "mergeable": "CONFLICTING",
+        "checks_state": null,
+        "verdict_comment": null
+      }
+    ],
+    "issues": [
+      {
+        "number": 125,
+        "title": "[app] Import write modes: new / merge / clone, slug collision, source provenance (held: needs PR #92)",
+        "labels": [
+          "agent",
+          "measured:live",
+          "feature"
+        ]
+      },
+      {
+        "number": 124,
+        "title": "[app] Add System dialog: 3-step import stepper + grouped 432-token fill surface",
+        "labels": [
+          "agent",
+          "measured:live",
+          "refactor"
+        ]
+      },
+      {
+        "number": 121,
+        "title": "[app] a failed system load has no retry",
+        "labels": [
+          "agent"
+        ]
+      },
+      {
+        "number": 120,
+        "title": "[app] Compare at 4/4 keeps the unrelated active system; no unpick",
+        "labels": [
+          "agent"
+        ]
+      },
+      {
+        "number": 119,
+        "title": "[app] docked token inspector is not Esc-closable",
+        "labels": [
+          "agent"
+        ]
+      },
+      {
+        "number": 118,
+        "title": "[app] the same token row is drawn two different ways",
+        "labels": [
+          "agent"
+        ]
+      },
+      {
+        "number": 117,
+        "title": "[app] one heading role, four sizes — inverted on Preview",
+        "labels": [
+          "agent"
+        ]
+      },
+      {
+        "number": 116,
+        "title": "[app] Add System becomes an import flow (Source → Review → Save); grouped schema fill",
+        "labels": [
+          "enhancement",
+          "agent",
+          "measured:live"
+        ]
+      },
+      {
+        "number": 115,
+        "title": "[app] dark control exists for only 2 of 37 systems",
+        "labels": [
+          "agent",
+          "retired"
+        ]
+      },
+      {
+        "number": 111,
+        "title": "[app] Restore the viewer theme toggle and the help dialog (legacy parity)",
+        "labels": [
+          "enhancement",
+          "agent",
+          "measured:live",
+          "retired"
+        ]
+      },
+      {
+        "number": 90,
+        "title": "[app] Shell: topbar clips at the narrow viewport, switcher ignores its font size, focus and modal a11y gaps",
+        "labels": [
+          "agent",
+          "measured:live"
+        ]
+      },
+      {
+        "number": 89,
+        "title": "[app] Legacy parity: the global theme toggle and the shortcuts dialog were dropped",
+        "labels": [
+          "agent",
+          "measured:live",
+          "retired"
+        ]
+      },
+      {
+        "number": 88,
+        "title": "[app] Gallery components fail WCAG and bypass the token layer with literals",
+        "labels": [
+          "agent",
+          "measured:live"
+        ]
+      },
+      {
+        "number": 87,
+        "title": "[app] Contrast is measured on the wrong palette: dark values in light mode, and below-AA controls",
+        "labels": [
+          "agent",
+          "measured:live"
+        ]
+      },
+      {
+        "number": 27,
+        "title": "[app] Preview token value-edits became permanent; Reset only clears swaps",
+        "labels": [
+          "bug",
+          "agent",
+          "scan:agent",
+          "measured:live"
+        ]
+      },
+      {
+        "number": 18,
+        "title": "[app] Every forceMounted tab's Rail runs a live scrollspy listener even while hidden/inactive",
+        "labels": [
+          "enhancement"
+        ]
+      },
+      {
+        "number": 17,
+        "title": "[app] CompareRail duplicates Rail's accordion/group markup instead of reusing shared rail chrome",
+        "labels": [
+          "enhancement"
+        ]
+      },
+      {
+        "number": 16,
+        "title": "[app] Preview tab rail is missing a design-system list — only the component outline is shown",
+        "labels": [
+          "enhancement"
+        ]
+      },
+      {
+        "number": 13,
+        "title": "[app] Deep-link e2e: tab/sys/section/compare restore + Copy Link round-trip",
+        "labels": [
+          "teyit gerekli",
+          "auto-ok"
+        ]
+      }
+    ]
+  },
+  "host": {
+    "disk": {
+      "c": {
+        "size": "120G",
+        "used": "119G",
+        "avail": "1.5G",
+        "use_pct": "99%",
+        "mount": "/c"
+      },
+      "d": {
+        "size": "342G",
+        "used": "112G",
+        "avail": "230G",
+        "use_pct": "33%",
+        "mount": "/d"
+      }
+    },
+    "ram": {
+      "total_mb": 7515,
+      "free_mb": 773
+    },
+    "processes": [
+      {
+        "pid": 14828,
+        "working_set_mb": 0,
+        "command_line": "C:/Users/user/AppData/Roaming/nvm/v22.23.2/node.exe -e \"let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{const t=JSON.parse(s).result.terminal;const l=t.tail||[];console.log(l.slice(-6).join('\\n'))}catch(e){console.log('parse-fail')}})\""
+      },
+      {
+        "pid": 24480,
+        "working_set_mb": 0,
+        "command_line": "C:/Users/user/AppData/Roaming/nvm/v22.23.2/node.exe -e \"let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{const t=JSON.parse(s).result.terminal;const l=t.tail||[];console.log(l.slice(-6).join('\\n'))}catch(e){console.log('parse-fail')}})\""
+      },
+      {
+        "pid": 12168,
+        "working_set_mb": 0,
+        "command_line": "C:/Users/user/AppData/Roaming/nvm/v22.23.2/node.exe -e \"let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{const t=JSON.parse(s).result.terminal;const l=t.tail||[];console.log(l.slice(-6).join('\\n'))}catch(e){console.log('parse-fail')}})\""
+      },
+      {
+        "pid": 27688,
+        "working_set_mb": 0,
+        "command_line": "C:/Users/user/AppData/Roaming/nvm/v22.23.2/node.exe -e \"let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{const t=JSON.parse(s).result.terminal;console.log((t.tail||[]).slice(-10).join('\\n'))}catch(e){console.log('parse-fail')}})\""
+      },
+      {
+        "pid": 2700,
+        "working_set_mb": 0,
+        "command_line": "C:/Users/user/AppData/Roaming/nvm/v22.23.2/node.exe -e \"let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{const t=JSON.parse(s).result.terminal;const l=(t.tail||[]).join('\\n');const m=l.match(/(\\d+m \\d+s|\\d+s) � \\$\\d+\\.\\d+|[\\d.]+K \\(\\d+%\\) � \\$\\d+\\.\\d+/g);console.log('sayac:',(m||['yok'])"
+      },
+      {
+        "pid": 3748,
+        "working_set_mb": 0,
+        "command_line": "C:/Users/user/AppData/Roaming/nvm/v22.23.2/node.exe -e \"let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{const t=JSON.parse(s).result.terminal;const l=(t.tail||[]).join('\\n');const m=l.match(/(\\d+m \\d+s|\\d+s) � \\$\\d+\\.\\d+|[\\d.]+K \\(\\d+%\\) � \\$\\d+\\.\\d+/g);console.log('sayac:',(m||['yok'])"
+      },
+      {
+        "pid": 25468,
+        "working_set_mb": 0,
+        "command_line": "C:/Users/user/AppData/Roaming/nvm/v22.23.2/node.exe -e \"let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{const t=JSON.parse(s).result.terminal;const l=(t.tail||[]).join('\\n');const m=l.match(/(\\d+m \\d+s|\\d+s) � \\$\\d+\\.\\d+|[\\d.]+K \\(\\d+%\\) � \\$\\d+\\.\\d+/g);console.log('sayac:',(m||['yok'])"
+      },
+      {
+        "pid": 22664,
+        "working_set_mb": 0,
+        "command_line": "C:/Users/user/AppData/Roaming/nvm/v22.23.2/node.exe -e \"let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{const r=JSON.parse(s).result||{};console.log(r.deliveryId||'bos',(r.messages||[]).map(m=>m.type).join(','))})\""
+      },
+      {
+        "pid": 3400,
+        "working_set_mb": 0,
+        "command_line": "C:/Users/user/AppData/Roaming/nvm/v22.23.2/node.exe -e \"let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{const ts=(JSON.parse(s).result||{}).terminals||[];ts.filter(t=>t.agentIdentity==='opencode').forEach(t=>console.log(' agent:',(t.worktreePath||'').split('viewer/').pop()))})\""
+      },
+      {
+        "pid": 16980,
+        "working_set_mb": 1,
+        "command_line": "\"node\"   \"C:\\Users\\user\\.serena\\language_servers\\static\\TypeScriptLanguageServer\\ts-lsp\\node_modules\\.bin\\\\..\\typescript-language-server\\lib\\cli.mjs\" --stdio"
+      },
+      {
+        "pid": 30396,
+        "working_set_mb": 0,
+        "command_line": "\"C:\\Program Files\\nodejs\\node.exe\" C:\\Users\\user\\.serena\\language_servers\\static\\TypeScriptLanguageServer\\ts-lsp\\node_modules\\typescript\\lib\\tsserver.js --serverMode partialSemantic --useInferredProjectPerProjectRoot --disableAutomaticTypingAcquisition --cancellationPipeName C:\\Users\\user\\AppData\\"
+      },
+      {
+        "pid": 16084,
+        "working_set_mb": 0,
+        "command_line": "\"C:\\Program Files\\nodejs\\node.exe\" C:\\Users\\user\\.serena\\language_servers\\static\\TypeScriptLanguageServer\\ts-lsp\\node_modules\\typescript\\lib\\tsserver.js --useInferredProjectPerProjectRoot --cancellationPipeName C:\\Users\\user\\AppData\\Local\\Temp\\4ed13457175f2534190b98b3ccecc747\\tscancellation* --loc"
+      },
+      {
+        "pid": 28508,
+        "working_set_mb": 0,
+        "command_line": "\"C:\\Program Files\\nodejs\\node.exe\" C:/Users/user/.serena/language_servers/static/TypeScriptLanguageServer/ts-lsp/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation C:/Users/user/AppData/Local/Microsoft/TypeScript/5.9 --typesMapLocation C:/Users/user/.serena/language_serv"
+      },
+      {
+        "pid": 19624,
+        "working_set_mb": 0,
+        "command_line": "\"C:\\Program Files\\nodejs\\node.exe\" \"C:\\Program Files\\nodejs/node_modules/npm/bin/npm-cli.js\" --prefix app run dev -- --port 5199 --strictPort"
+      },
+      {
+        "pid": 23056,
+        "working_set_mb": 15,
+        "command_line": "\"node\"   \"C:\\Users\\user\\orca\\workspaces\\design-system-viewer\\melusine\\app\\node_modules\\.bin\\\\..\\vite\\bin\\vite.js\" --port 5199 --strictPort"
+      },
+      {
+        "pid": 21212,
+        "working_set_mb": 38,
+        "command_line": "\"C:\\Program Files\\nodejs\\node.exe\" src/snapshot.js"
+      }
+    ],
+    "listeners": [],
+    "orphan_dirs": [
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/app-reviewer-9d668e",
+        "size_bytes": 4096,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/coder-1",
+        "size_bytes": 4096,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/fixer-93-2",
+        "size_bytes": 4096,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/issue-1-compare-tab",
+        "size_bytes": 125166592,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/melusine",
+        "size_bytes": 154572800,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-103c",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-107",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-114",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-114b",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-20",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-24",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-29",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-33",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-33b",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-40",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-62",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-69",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-69-2",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-69c",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-70",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-77",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-83b",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-83d",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-83e",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-92c",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-93c",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-93e",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-97",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/wiring-82",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/wiring-83b",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/wiring-92",
+        "size_bytes": 0,
+        "registered": false
+      }
+    ]
+  },
+  "derived": {
+    "task_terminal_pr_table": [
+      {
+        "task_id": "task_c23d87eea0c9",
+        "task_title": "fixer: rebase PR 93 onto the pipeline base and resolve 5 gallery conflicts",
+        "task_status": "ready",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": {
+          "number": 93,
+          "mergeable": "MERGEABLE",
+          "verdict_comment": null,
+          "checks_state": null
+        }
+      },
+      {
+        "task_id": "task_ad86861fd042",
+        "task_title": "tester issue #35",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": null
+      },
+      {
+        "task_id": "task_2de50d479073",
+        "task_title": "tester for issue #38 / PR 57",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": null
+      },
+      {
+        "task_id": "task_85bae84e8a8b",
+        "task_title": "test PR for issue 69",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": null
+      },
+      {
+        "task_id": "task_bb6d266b05f1",
+        "task_title": "test PR for issue 70",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": null
+      },
+      {
+        "task_id": "task_ae3604dfcb68",
+        "task_title": "coder issue 30 (file-local half)",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": null
+      },
+      {
+        "task_id": "task_7ee954bc5701",
+        "task_title": "review PR 83 (retry after the agent died)",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": null
+      },
+      {
+        "task_id": "task_e60b4f8573d5",
+        "task_title": "coder issue 90 (audit finding)",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": null
+      },
+      {
+        "task_id": "task_02bd028b25ad",
+        "task_title": "test PR 93 (gallery contrast live)",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": {
+          "number": 93,
+          "mergeable": "MERGEABLE",
+          "verdict_comment": null,
+          "checks_state": null
+        }
+      },
+      {
+        "task_id": "task_ab7478596f41",
+        "task_title": "fix PR 92 precedence + root repaint",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": {
+          "number": 92,
+          "mergeable": "CONFLICTING",
+          "verdict_comment": null,
+          "checks_state": null
+        }
+      },
+      {
+        "task_id": "task_00fc3eefd41e",
+        "task_title": "review PR 99 (shell contract)",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": null
+      },
+      {
+        "task_id": "task_cadc9e6c0c01",
+        "task_title": "re-review PR 93 (zero-sweep credibility)",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": {
+          "number": 93,
+          "mergeable": "MERGEABLE",
+          "verdict_comment": null,
+          "checks_state": null
+        }
+      },
+      {
+        "task_id": "task_20c94242709a",
+        "task_title": "re-test PR 93 (zero sweep) on ddcf730",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": {
+          "number": 93,
+          "mergeable": "MERGEABLE",
+          "verdict_comment": null,
+          "checks_state": null
+        }
+      },
+      {
+        "task_id": "task_362982bd6d20",
+        "task_title": "test PR 93 on 940bac0 (sweep, rebased)",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": {
+          "number": 93,
+          "mergeable": "MERGEABLE",
+          "verdict_comment": null,
+          "checks_state": null
+        }
+      },
+      {
+        "task_id": "task_20dbf78dfd37",
+        "task_title": "test PR 92 on e10290e (legacy order, rebased)",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": {
+          "number": 92,
+          "mergeable": "CONFLICTING",
+          "verdict_comment": null,
+          "checks_state": null
+        }
+      },
+      {
+        "task_id": "task_6232324ba6d3",
+        "task_title": "test PR 93 (fresh) on 940bac0",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": {
+          "number": 93,
+          "mergeable": "MERGEABLE",
+          "verdict_comment": null,
+          "checks_state": null
+        }
+      },
+      {
+        "task_id": "task_beee6d335fd7",
+        "task_title": "test PR 92 (fresh) on e10290e",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": {
+          "number": 92,
+          "mergeable": "CONFLICTING",
+          "verdict_comment": null,
+          "checks_state": null
+        }
+      },
+      {
+        "task_id": "task_2912040467cb",
+        "task_title": "test PR 93 (serialized) on 940bac0",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": {
+          "number": 93,
+          "mergeable": "MERGEABLE",
+          "verdict_comment": null,
+          "checks_state": null
+        }
+      },
+      {
+        "task_id": "task_483fd79d4e62",
+        "task_title": "audit BAD (keyboard, ARIA, measured contrast, motion, targets) on http://loca...",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": null
+      },
+      {
+        "task_id": "task_a411faf7607f",
+        "task_title": "coder #112 (viewer chrome type and font)",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": null
+      },
+      {
+        "task_id": "task_65d6b653b431",
+        "task_title": "review PR 114 (dark gallery contrast)",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": null
+      },
+      {
+        "task_id": "task_df7fc9c42ebc",
+        "task_title": "review PR 107 (shell refactor on the pipeline base)",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": null
+      },
+      {
+        "task_id": "task_c917d49cbcd7",
+        "task_title": "review PR 107 (shell refactor on the pipeline base)",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": null
+      },
+      {
+        "task_id": "task_fbf127608429",
+        "task_title": "test PR 114 (dark gallery contrast) on 4218",
+        "task_status": "failed",
+        "dispatched": false,
+        "assignee_handle": null,
+        "terminal": null,
+        "liveness": null,
+        "requires_action": null,
+        "pr": null
+      }
+    ],
+    "orphan_dirs": [
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/app-reviewer-9d668e",
+        "size_bytes": 4096,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/coder-1",
+        "size_bytes": 4096,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/fixer-93-2",
+        "size_bytes": 4096,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/issue-1-compare-tab",
+        "size_bytes": 125166592,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/melusine",
+        "size_bytes": 154572800,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-103c",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-107",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-114",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-114b",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-20",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-24",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-29",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-33",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-33b",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-40",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-62",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-69",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-69-2",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-69c",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-70",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-77",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-83b",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-83d",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-83e",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-92c",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-93c",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-93e",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/tester-97",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/wiring-82",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/wiring-83b",
+        "size_bytes": 0,
+        "registered": false
+      },
+      {
+        "path": "C:/Users/user/orca/workspaces/design-system-viewer/wiring-92",
+        "size_bytes": 0,
+        "registered": false
+      }
+    ],
+    "notes": [
+      "worktree list returned 4 trees, 2 in design-system-viewer scope",
+      "PR #126 not probed for checks/verdict: no dispatched task names it (kept as a row, marked null)",
+      "PR #93 not probed for checks/verdict: no dispatched task names it (kept as a row, marked null)",
+      "PR #92 not probed for checks/verdict: no dispatched task names it (kept as a row, marked null)",
+      "host.du: exited null but produced output; using it",
+      "no task is dispatched at this moment; the table lists the 24 open task(s) with their status instead of being empty"
+    ]
+  }
+}

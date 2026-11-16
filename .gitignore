@@ -1,0 +1,4 @@
+node_modules/
+evidence/A0/manifest-tampered.json
+# verify-untouched writes 3 skill snapshots per diff run; runtime evidence, not source
+backups/

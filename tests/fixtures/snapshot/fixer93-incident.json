@@ -1,0 +1,63 @@
+{
+  "_fixture": {
+    "synthetic": true,
+    "incident": "fixer #93, 2026-09-21 ~13:18Z — the day's problem in one frame: a worker that had done its work but could not report it, no collection, and no next dispatch.",
+    "reconstructed_from": "orca task-list/dispatch-show output recorded that day, the opencode.log lines (five stream errors then 'Cannot connect to API'), and the coordinator's own notes. The worker's terminal no longer exists, so its screen is a reconstruction, labelled as such in tests/fixtures/screens/screens.json.",
+    "purpose": "The end-to-end gut-check for C3: does snapshot -> classify -> reconcile actually catch this, and does it propose the right thing?"
+  },
+  "schema": "snapshot/1",
+  "taken_at_utc": "2026-09-21T13:18:30Z",
+  "taken_by": "tests/fixtures/snapshot/fixer93-incident.json",
+  "read_only": true,
+  "errors": [],
+  "orca": {
+    "version": "1.4.206",
+    "run": { "run_id": "run_4e539259ab29", "coordinator_handle": "term_752a4375-4a0f-449a-84dd-1f87898c0157" },
+    "tasks": [
+      { "id": "task_c23d87eea0c9", "title": "fixer: rebase PR 93 onto the pipeline base and resolve 5 gallery conflicts", "status": "dispatched", "created_at": "2026-09-21T09:23:01Z", "created_by_terminal": "term_752a4375-4a0f-449a-84dd-1f87898c0157" },
+      { "id": "task_0e29a5e03a38", "title": "test PR 93 (gallery WCAG contrast) on 4223", "status": "dispatched", "created_at": "2026-09-21T09:13:36Z", "created_by_terminal": "term_752a4375-4a0f-449a-84dd-1f87898c0157" }
+    ],
+    "dispatches": [
+      { "task_id": "task_c23d87eea0c9", "dispatch_id": "d_fixer93", "assignee_handle": "term_bcb8d4ed", "liveness": "live", "attention": null, "requires_action": false, "next_action": null, "resource_state": "external" },
+      { "task_id": "task_0e29a5e03a38", "dispatch_id": "d_tester93", "assignee_handle": "term_tester93", "liveness": "live", "attention": null, "requires_action": false, "next_action": null, "resource_state": "external" }
+    ],
+    "worker_pages": { "pages": 1, "rows": 2, "counts_retained": 2, "truncated": false },
+    "terminals": [
+      { "handle": "term_bcb8d4ed", "agent": "opencode", "state": "active", "retained": true },
+      { "handle": "term_tester93", "agent": "opencode", "state": "active", "retained": true }
+    ],
+    "worktrees": [
+      { "path": "C:/Users/user/orca/workspaces/design-system-viewer/fixer-93-2", "branch": "refs/heads/coder/88-gallery-wcag-tokens", "display_name": "fixer-93-2" },
+      { "path": "C:/Users/user/orca/workspaces/design-system-viewer/proteus-5", "branch": "refs/heads/fix/shell-onto-pipeline-base", "display_name": "proteus-5" }
+    ]
+  },
+  "github": {
+    "prs": [
+      { "number": 93, "title": "gallery WCAG contrast + calendar-day sweep", "head_sha": "940bac070ff6d50f860bd2f4bd40569320084c26", "base": "refactor/full-react-migration", "mergeable": "MERGEABLE", "checks_state": "success", "verdict_comment": false },
+      { "number": 92, "title": "token overrides", "head_sha": "5754757813", "base": "refactor/full-react-migration", "mergeable": "MERGEABLE", "checks_state": "success", "verdict_comment": true }
+    ],
+    "issues": [
+      { "number": 121, "title": "rail loses its frame on scroll", "labels": ["agent"] },
+      { "number": 120, "title": "props panel spacing", "labels": ["agent"] }
+    ]
+  },
+  "host": {
+    "disk": { "c": { "size": "120G", "used": "115G", "avail": "5.4G", "use_pct": "96%", "mount": "/c" } },
+    "ram": { "total_mb": 7515, "free_mb": 481 },
+    "processes": [],
+    "listeners": [ { "port": 4223, "pid": 26608, "state": "LISTENING" } ],
+    "orphan_dirs": []
+  },
+  "derived": {
+    "task_terminal_pr_table": [
+      { "task_id": "task_c23d87eea0c9", "task_title": "fixer: rebase PR 93 onto the pipeline base and resolve 5 gallery conflicts", "task_status": "dispatched", "dispatched": true, "assignee_handle": "term_bcb8d4ed", "terminal": { "handle": "term_bcb8d4ed", "agent": "opencode", "state": "active" }, "liveness": "live", "requires_action": false, "pr": { "number": 93, "mergeable": "MERGEABLE", "verdict_comment": false, "checks_state": "success" } },
+      { "task_id": "task_0e29a5e03a38", "task_title": "test PR 93 (gallery WCAG contrast) on 4223", "task_status": "dispatched", "dispatched": true, "assignee_handle": "term_tester93", "terminal": { "handle": "term_tester93", "agent": "opencode", "state": "active" }, "liveness": "live", "requires_action": false, "pr": { "number": 93, "mergeable": "MERGEABLE", "verdict_comment": false, "checks_state": "success" } }
+    ],
+    "orphan_dirs": [],
+    "notes": ["fixture: the two workers are the fixer and the tester that were live at 13:18Z"]
+  },
+  "screens": {
+    "term_bcb8d4ed": "  fixer #93 · rebase PR 93 onto the pipeline base\n\n  I have rebased onto 8a854ff and resolved the gallery conflicts. Running the suite before pushing.\n\n  ⬝⬝⬝⬝⬝⬝⬝⬝\n\n  stream error: upstream closed the connection\n  stream error: upstream closed the connection\n  stream error: upstream closed the connection\n  stream error: upstream closed the connection\n  stream error: upstream closed the connection\n  Cannot connect to API\n",
+    "term_tester93": "  tester-93 · verify PR 93 in a browser\n\n  preview server started on :4223\n\n  ⬝⬝⬝⬝⬝⬝⬝⬝\n"
+  }
+}

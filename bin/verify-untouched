@@ -1,0 +1,211 @@
+#!/usr/bin/env node
+// verify-untouched — prove the untouchable set has not changed since the manifest was built.
+//
+// READ-ONLY. It recomputes the manifest in memory (build-manifest.js --stdout) and compares it
+// with manifest/protected.json. It writes nothing and runs no write command.
+//
+// Exit codes: 0 = every row UNCHANGED  1 = at least one diff  2 = could not verify (no manifest)
+//
+// Content (sha256/size) decides. An mtime-only difference is reported as MTIME and does NOT
+// fail the run: reading a file can update atime, and a tool that rewrites a file byte-identically
+// has not changed the thing we protect. A missing or new file IS a failure.
+//
+// Usage: node bin/verify-untouched [--quiet]
+
+const fs = require('fs');
+const path = require('path');
+const { execFileSync } = require('child_process');
+
+const V2 = 'D:/code/orca-supervisor';
+const HERMES = path.join(process.env.LOCALAPPDATA || '', 'hermes');
+const QUIET = process.argv.includes('--quiet');
+const normPath = (p) => String(p || '').split('\\').join('/');
+
+const guard = require(path.join(V2, 'src/guard/exec.js'));
+
+function rebuild() {
+  // Through the single exit gate, like every other process call in v2.
+  const r = guard.run(['node', 'src/build-manifest.js', '--stdout'], { cwd: V2, dryRun: false, timeout: 600000 });
+  if (!r.ok) throw new Error(`build-manifest failed: ${r.decision ? r.decision.rule : ''} ${r.error || ''}`);
+  return JSON.parse(r.stdout);
+}
+
+function main() {
+  const mi = process.argv.indexOf('--manifest');
+  const mp = mi > -1 ? process.argv[mi + 1] : path.join(V2, 'manifest/protected.json');
+  if (!mp || !fs.existsSync(mp)) { console.error(`verify-untouched: no manifest at ${mp}`); process.exit(2); }
+  const before = JSON.parse(fs.readFileSync(mp, 'utf8'));
+  const after = rebuild();
+
+  const key = (f) => f.path;
+  const b = new Map(before.files.map(f => [key(f), f]));
+  const a = new Map(after.files.map(f => [key(f), f]));
+
+  const changed = [], missing = [], added = [], mtimeOnly = [], unchanged = [], volatileDiff = [], runtimeDiff = [], runtimeMissing = [];
+  for (const [k, f] of b) {
+    const g = a.get(k);
+    if (!g) {
+      // A row flagged runtime_volatile can legitimately be absent at the moment of the check: Orca
+      // replaces its own settings file rather than editing it in place, so a check can land in the gap
+      // (measured on 2026-09-27). Absence is still NAMED — it just cannot be a static failure for a row
+      // that was declared runtime-churned. A row without the flag is unchanged behaviour: MISSING, fails.
+      if (f.runtime_volatile) { runtimeMissing.push(f); continue; }
+      missing.push(f); continue;
+    }
+    if (g.sha256 !== f.sha256 || g.size !== f.size) {
+      if (f.volatile || g.volatile) volatileDiff.push({ f, g });
+      else if (f.runtime_volatile || g.runtime_volatile) runtimeDiff.push({ f, g });
+      else changed.push({ f, g });
+    } else if (g.mtime_ms !== f.mtime_ms) mtimeOnly.push({ f, g });
+    else unchanged.push(f);
+  }
+  for (const [k, g] of a) if (!b.has(k)) added.push(g);
+
+  // Cron job DEFINITION drift is a static failure; runtime churn is not (section item 4).
+  const cronDefDrift = [];
+  const bc = before.dynamic.cron_jobs, ac = after.dynamic.cron_jobs;
+  if (Array.isArray(bc) && Array.isArray(ac)) {
+    const am = new Map(ac.map(j => [j.id, j]));
+    for (const j of bc) {
+      const g = am.get(j.id);
+      if (!g) { cronDefDrift.push(`${j.name || j.id}: job removed`); continue; }
+      if (g.definition_sha256 !== j.definition_sha256) cronDefDrift.push(`${j.name || j.id}: definition changed`);
+    }
+    for (const g of ac) if (!bc.some(j => j.id === g.id)) cronDefDrift.push(`${g.name || g.id}: job added`);
+  }
+
+  // Annotate curator-caused rows with the ledger entry that explains them. Nothing is hidden:
+  // the row still counts as CHANGED and still fails.
+  const ledger = path.join(HERMES, 'skills/.curator_ledger.jsonl');
+  const annotations = new Map();
+  if (fs.existsSync(ledger)) {
+    for (const line of fs.readFileSync(ledger, 'utf8').split('\n').filter(Boolean)) {
+      let j; try { j = JSON.parse(line); } catch { continue; }
+      if (!j.ts || j.ts < before.built_at_utc) continue;
+      const paths = Array.isArray(j.before) ? j.before.map(e => normPath(e.path)) : [];
+      for (const p of paths) {
+        if (!annotations.has(p)) annotations.set(p, []);
+        annotations.get(p).push(`${j.actor}/${j.action} at ${j.ts} (session ${(j.evidence || {}).session_id || '-'})`);
+      }
+    }
+  }
+
+  const dyn = [];
+  if (before.tasks_md_sha256 !== after.tasks_md_sha256) {
+    dyn.push(`TASKS.md sha256: ${before.tasks_md_sha256} -> ${after.tasks_md_sha256}`);
+  }
+  const bj = JSON.stringify(before.dynamic.cron_jobs);
+  const aj = JSON.stringify(after.dynamic.cron_jobs);
+  if (bj !== aj) dyn.push(`cron jobs changed:\n  before ${bj}\n  after  ${aj}`);
+  for (const wt of Object.keys(before.dynamic.git || {})) {
+    const b0 = before.dynamic.git[wt], a0 = (after.dynamic.git || {})[wt];
+    if (!a0) { dyn.push(`git state missing for ${wt}`); continue; }
+    if (b0.head !== a0.head) dyn.push(`HEAD changed ${wt}: ${b0.head} -> ${a0.head}`);
+    if (b0.porcelain !== a0.porcelain) dyn.push(`git status --porcelain changed in ${wt}`);
+  }
+
+  // FAIL vs INFORMATIONAL. Only the content of a STATIC protected file may fail this run.
+  // The dynamic baseline (git HEADs, porcelain, PR list, labels, Orca counts) is recorded for
+  // comparison but is INFORMATIONAL: the live pipeline moves those legitimately on every merge,
+  // dispatch and task update, and a verifier that fails on them is a verifier nobody runs.
+  // When a SKILL row changed, keep a copy of the new content inside the v2 zone so the next
+  // rewrite is diffable. The curator's 15:34 rewrite was unrecoverable because no such copy
+  // existed; this is the fix for that class of loss.
+  let snapshotInfo = null;
+  const skillRows = [...changed.map(c => c.g), ...added].filter(r => r.zone === 'hermes:skills');
+  if (skillRows.length) {
+    const dirs = new Set();
+    for (const r of skillRows) {
+      let d = path.dirname(r.path);
+      for (let i = 0; i < 4 && d.includes('/skills/'); i++) {
+        if (fs.existsSync(path.join(d, 'SKILL.md'))) { dirs.add(d); break; }
+        d = path.dirname(d);
+      }
+    }
+    snapshotInfo = [];
+    try {
+      const { snapshotSkill } = require(path.join(V2, 'src/snapshot-skills.js'));
+      for (const d of dirs) {
+        const s = snapshotSkill(d, `verify-untouched: ${skillRows.length} changed/new skill row(s)`);
+        snapshotInfo.push(`${s.dir} (${s.count} files)`);
+      }
+    } catch (e) {
+      snapshotInfo = [`snapshot failed: ${String(e.message).slice(0, 120)}`];
+    }
+  }
+
+  // Rows under a prefix the coordinator has explicitly declared out of scope (an external worktree
+  // someone else created, for instance) are reported on their own line. They are neither protected
+  // nor silently dropped: an external arrival must be visible, and it must not read as our failure.
+  const oosDoc = (() => {
+    const p = path.join(V2, 'manifest/out-of-scope.json');
+    try {
+      return JSON.parse(fs.readFileSync(p, 'utf8'));
+    } catch (e) {
+      // Deliberately loud: a silent catch here is exactly how the first version of this block
+      // reported zero out-of-scope rows while quietly failing to read the file at all.
+      if (e && e.code !== 'ENOENT') console.error(`verify-untouched: out-of-scope list unreadable (${e.message})`);
+      return {};
+    }
+  })();
+  const oos = oosDoc.entries || [];
+  const oosEvents = oosDoc.events || [];
+  const addedOOS = added.filter(n => oos.some(o =>
+    normPath(n.path).toLowerCase().startsWith(normPath(String(o.prefix)).toLowerCase())));
+  const addedInScope = added.filter(n => !addedOOS.includes(n));
+
+  const staticFail = changed.length + missing.length + addedInScope.length + cronDefDrift.length
+    + (before.tasks_md_sha256 !== after.tasks_md_sha256 ? 1 : 0);
+  const informational = dyn.length;
+  const failed = staticFail;
+
+  console.log('verify-untouched');
+  console.log(`  manifest built at : ${before.built_at_utc}`);
+  console.log(`  rows compared     : ${before.files.length}`);
+  console.log(`  UNCHANGED         : ${unchanged.length}`);
+  console.log(`  MTIME             : ${mtimeOnly.length}  (informational, not a failure)`);
+  console.log(`  VOLATILE          : ${volatileDiff.length}  (curator bookkeeping, not a failure)`);
+  console.log(`  RUNTIME           : ${runtimeDiff.length}  (runtime-churned files e.g. cron state, not a failure)`);
+  console.log(`  RUNTIME MISSING   : ${runtimeMissing.length}  (runtime-volatile rows absent at the moment of the check, not a failure)`);
+  console.log(`  CHANGED           : ${changed.length}   <- static, fails`);
+  console.log(`  MISSING           : ${missing.length}   <- static, fails`);
+  console.log(`  NEW               : ${addedInScope.length}   <- static, fails`);
+  console.log(`  OBSERVED (out of scope, external) : ${addedOOS.length}   (not protected, never fails, never hidden)`);
+  console.log(`  CRON_DEF          : ${cronDefDrift.length}   <- static (job definitions), fails`);
+  console.log(`  DYNAMIC diffs     : ${informational}  (INFORMATIONAL ONLY: git/gh/orca baseline, never fails)`);
+  if (!QUIET) {
+    for (const c of volatileDiff.slice(0, 20)) console.log(`   VOLATILE ${c.f.path}`);
+    for (const c of runtimeDiff.slice(0, 20)) console.log(`   RUNTIME  ${c.f.path}`);
+    for (const c of runtimeMissing.slice(0, 20)) console.log(`   RUNTIME-MISSING ${c.path}`);
+    for (const d of cronDefDrift) console.log(`   CRON_DEF ${d}`);
+    for (const c of changed.slice(0, 40)) {
+      console.log(`   CHANGED ${c.f.path}\n     ${c.f.sha256.slice(0, 16)} -> ${c.g.sha256.slice(0, 16)}`);
+      const ann = annotations.get(normPath(c.f.path));
+      if (ann && ann.length) for (const x of ann) console.log(`     explained by curator ledger: ${x}`);
+      else console.log('     no curator ledger entry for this row');
+    }
+    for (const m of missing.slice(0, 40)) console.log(`   MISSING ${m.path}`);
+    for (const n of addedInScope.slice(0, 40)) console.log(`   NEW     ${n.path}`);
+    for (const n of addedOOS.slice(0, 40)) console.log(`   OBSERVED ${n.path}`);
+    // Printed even when nothing is classified, so the mechanism cannot go quiet: a declared prefix that
+    // stopped producing rows (because Orca unregistered it, say) must stay visible rather than look
+    // like a rule that no longer exists. The current status comes from the latest appended event.
+    if (oos.length) {
+      console.log(`   OBSERVED (${addedOOS.length} row(s)) declared out of scope — ${oos.length} prefix(es), ${(before.events || oosEvents).length} event(s):`);
+      for (const o of oos) {
+        const ev = (oosEvents || []).filter(e => e.prefix === o.prefix).pop();
+        const now = ev ? `${ev.to} (as of ${ev.observed_at})` : o.decision;
+        console.log(`     ${o.prefix} — ${now}`);
+      }
+    }
+    for (const d of dyn) console.log(`   DYNAMIC ${d}`);
+  }
+  console.log(failed ? 'verify-untouched: DIFF DETECTED' : 'verify-untouched: every row UNCHANGED');
+  if (snapshotInfo && snapshotInfo.length) {
+    console.log('  skill snapshot(s) written (v2 zone, so the change stays diffable):');
+    for (const s of snapshotInfo) console.log(`   ${s}`);
+  }
+  process.exit(failed ? 1 : 0);
+}
+
+main();

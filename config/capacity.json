@@ -1,0 +1,15 @@
+{
+  "schema": "v2-capacity-thresholds/1",
+  "written_at_utc": "2026-09-26T19:24:00Z",
+  "written_by": "orca-sup supervisor session, on the operator's instruction to implement D1's spec",
+  "source": "D1 — docs/d1-capacity.md. These two values are the ones src/capacity.js shipped with as constants; this file is the spec'd home for them.",
+  "margin_mb": 700,
+  "margin_mb_basis": "D1's stop-adding-load floor: below this much available RAM the machine is already suffering, so no worker is added.",
+  "peak_mb_per_worker": 400,
+  "peak_mb_per_worker_basis": "Measured PEAK RSS of one opencode worker (2 samples, 2026-09-25). The ~100 MB idle figure is deliberately NOT used: a worker must fit at its worst moment or the machine suffers at its worst moment.",
+  "free_slots_basis": "floor((available_mb - margin_mb) / peak_mb_per_worker), floored at 0",
+  "unmeasured": [
+    "npm ci peak RSS — D1's one honest gap, to be captured opportunistically during a real scenario"
+  ],
+  "notes": "Capacity itself is never cached: src/capacity.js reads os.freemem() live on every call, and this file carries only the thresholds. If this file is missing or unparseable, the reader must fall back to the same two numbers so a broken config cannot silently change a safety floor."
+}
